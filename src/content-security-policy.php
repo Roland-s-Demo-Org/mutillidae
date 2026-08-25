@@ -110,10 +110,10 @@ try {
 if ($lFormSubmitted){
     try{
         echo '<div>&nbsp;</div>';
-        echo '<div class="report-header">Results for '.$lMessageText.'</div>';
+        echo '<div class="report-header">Results for '.htmlentities($lMessageText, ENT_QUOTES).'</div>';
 
         if ($lProtectAgainstCommandInjection) {
-            echo '<pre class="output">'.$lMessageText.'</pre>';
+            echo '<pre class="output">'.htmlentities($lMessageText, ENT_QUOTES).'</pre>';
             $LogHandler->writeToLog("Executed PHP command: echo " . $lMessageText);
         }else{
             echo '<pre class="output">'.shell_exec("echo -n " . $lMessage).'</pre>';

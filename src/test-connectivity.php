@@ -90,7 +90,7 @@
 if ($lFormSubmitted){
 	    try{
 			$lCurrentOrigin = $_SERVER['HTTP_HOST'];
-	        echo '<div class="report-header">Results for '.$lServerURLText.'</div>';
+	        echo '<div class="report-header">Results for '.htmlentities($lServerURLText, ENT_QUOTES).'</div>';
             echo '<pre class="output">' .
 				 shell_exec("curl --silent -H 'Origin: http://$lCurrentOrigin' " . $lServerURL) .
 				 '</pre>';

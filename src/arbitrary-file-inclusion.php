@@ -57,7 +57,7 @@
 	</tr>
 	<tr><td>&nbsp;</td></tr>
 	<tr style="text-align: left;">
-		<td class="label">Current Page: <?php echo $lPage; ?></td>
+		<td class="label">Current Page: <?php echo htmlentities($lPage, ENT_QUOTES); ?></td>
 	</tr>
 	<tr>
 		<td LocalFileInclusionVulnerability="1" class="label">
