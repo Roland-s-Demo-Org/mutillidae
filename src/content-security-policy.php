@@ -116,7 +116,7 @@ if ($lFormSubmitted){
             echo '<pre class="output">'.$lMessageText.'</pre>';
             $LogHandler->writeToLog("Executed PHP command: echo " . $lMessageText);
         }else{
-            echo '<pre class="output">'.shell_exec("echo -n " . $lMessage).'</pre>';
+            echo '<pre class="output">'.shell_exec("echo -n " . escapeshellarg($lMessage)).'</pre>';
             $LogHandler->writeToLog("Executed operating system command: echo " . $lMessageText);
         }//end if
 

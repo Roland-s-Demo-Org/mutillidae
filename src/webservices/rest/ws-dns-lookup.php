@@ -95,7 +95,7 @@ try {
 
     $lCommand = $lProtectAgainstCommandInjection
                 ? escapeshellcmd("nslookup " . escapeshellarg($lHostname))
-                : "nslookup " . $lHostname;
+                : "nslookup " . escapeshellarg($lHostname);
 
     $lOutput = shell_exec($lCommand);
     $LogHandler->writeToLog("Command executed from web service ws-dns-lookup.php: " . $lCommand);

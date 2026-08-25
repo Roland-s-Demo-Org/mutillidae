@@ -92,7 +92,7 @@ if ($lFormSubmitted){
 			$lCurrentOrigin = $_SERVER['HTTP_HOST'];
 	        echo '<div class="report-header">Results for '.$lServerURLText.'</div>';
             echo '<pre class="output">' .
-				 shell_exec("curl --silent -H 'Origin: http://$lCurrentOrigin' " . $lServerURL) .
+				 shell_exec("curl --silent -H " . escapeshellarg("Origin: http://$lCurrentOrigin") . " " . escapeshellarg($lServerURL)) .
 				 '</pre>';
 	        $LogHandler->writeToLog("Executed PHP command: curl --silent " . $lServerURLText);
     	}catch(Exception $e){
