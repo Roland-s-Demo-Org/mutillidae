@@ -33,7 +33,7 @@
 			}//end while $row
 		}else{
 			echo '	<div class="help-text-header">
-					Page ' . $lPageName . ' does not have any help documentation.</div>';
+					Page ' . htmlentities($lPageName, ENT_QUOTES) . ' does not have any help documentation.</div>';
 		}//end if
 
 		echo '<div>&nbsp;</div>';

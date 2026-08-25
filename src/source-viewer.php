@@ -78,7 +78,7 @@
 		<tr>
 			<td class="label">Source File Name</td>
 			<td>
-				<input type="hidden" name="page" value="<?php echo $_REQUEST['page']?>">
+				<input type="hidden" name="page" value="<?php echo htmlentities($_REQUEST['page'], ENT_QUOTES)?>">
 				<select name="phpfile" id="id_file_select" autofocus="autofocus" <?php echo $lHTMLControlAttributes ?>>
 				<?php 
 					$_SESSION['source-viewer-files-array'] = "";
@@ -214,7 +214,7 @@
 		   	
 		   	// try to display the file
 		   	try {
-	   			echo '<span class="label">File: '.$lFilename.'</span>';
+	   			echo '<span class="label">File: '.htmlentities($lFilename, ENT_QUOTES).'</span>';
 	   			echo '<pre>';
 				highlight_file($lFilename);
 				echo '</pre>';
