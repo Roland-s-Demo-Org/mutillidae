@@ -162,7 +162,7 @@
 	    		    }// end foreach
 	    		    echo '</pre>';
 	    		}else{
-	    		    echo '<pre class="output">'.shell_exec("nslookup " . $lTargetHost).'</pre>';
+	    	    echo '<pre class="output">'.shell_exec("nslookup " . escapeshellarg($lTargetHost)).'</pre>';
 	    		}//end if $lProtectAgainstCommandInjection
 				$LogHandler->writeToLog("Executed operating system command: nslookup " . $lTargetHostText);
 	    	}else{
