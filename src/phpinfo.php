@@ -26,7 +26,7 @@
 	}// end switch
 
 	if($lShowPHPInfo){
-	    echo phpinfo(INFO_ALL);
+
 	}else{
 		echo '<table><tr><td class="error-message">Secure sites do not expose administrative or configuration pages to the Internet</td></tr></table>';
 	}//end if $lShowPHPInfo
