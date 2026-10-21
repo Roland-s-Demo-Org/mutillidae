@@ -148,7 +148,7 @@
     if ($lFormSubmitted){
 	    try{
 	    	if ($lTargetHostValidated){
-	    		echo '<div class="report-header">Results for '.$lTargetHostText.'</div>';
+	    		echo '<div class="report-header">Results for '.htmlentities($lTargetHostText, ENT_QUOTES).'</div>';
 	    		if ($lProtectAgainstCommandInjection) {
 	    		    $lResults = dns_get_record($lTargetHost, DNS_A);
 	    		    echo '<pre class="output">';

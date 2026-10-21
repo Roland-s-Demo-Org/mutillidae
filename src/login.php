@@ -89,7 +89,7 @@
 			enctype="application/x-www-form-urlencoded"
 			onsubmit="return onSubmitOfLoginForm(this);"
 			id="idLoginForm">
-		<input type="hidden" name="redirectPage" value="<?php echo $lRedirectPage; ?>">
+		<input type="hidden" name="redirectPage" value="<?php echo htmlentities($lRedirectPage, ENT_QUOTES); ?>">
 		<table>
 			<tr id="id-authentication-failed-tr" style="display: none;">
 				<td id="id-authentication-failed-td" colspan="2" class="error-message"></td>
