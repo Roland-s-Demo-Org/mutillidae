@@ -145,7 +145,7 @@
 	<div class="label">
 	<?php 
 		if (!$lEncodeOutput){
-			echo $lDocumentToBeFramedMessage; 
+			echo htmlentities($lDocumentToBeFramedMessage, ENT_QUOTES); 
 		}else{
 			echo $Encoder->encodeForHTML($lDocumentToBeFramedMessage);
 		}// end if
@@ -153,7 +153,7 @@
 	?>
 	</div>
 	<div>&nbsp;</div>
-	<iframe src="<?php echo $lDocumentToBeFramed; ?>" width="700px" height="500px"></iframe>
+	<iframe src="<?php echo htmlentities($lDocumentToBeFramed, ENT_QUOTES); ?>" width="700px" height="500px"></iframe>
 </fieldset>
 
 <?php

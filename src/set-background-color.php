@@ -88,7 +88,7 @@
 		method="post" 
 		enctype="application/x-www-form-urlencoded"
 		onsubmit="return onSubmitOfForm(this);"
-		style="background-color:#<?php echo $lBackgroundColor; ?>"
+		style="background-color:#<?php echo htmlentities($lBackgroundColor, ENT_QUOTES); ?>"
 	>
 	<table>
 		<tr id="id-bad-cred-tr" style="display: none;">
@@ -122,7 +122,7 @@
 		<tr><td>&nbsp;</td></tr>
 		<tr>
 			<td class="informative-message" colspan="2" style="text-align: center;">
-				The current background color is <?php echo $lBackgroundColorText; ?>
+				The current background color is <?php echo htmlentities($lBackgroundColorText, ENT_QUOTES); ?>
 			</td>
 		</tr>
 		<tr><td>&nbsp;</td></tr>
