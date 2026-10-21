@@ -85,7 +85,7 @@ try {
     }
 
     if (!$lProtectAgainstCommandInjection) {
-        $lCommand = "echo " . $lMessage; // Vulnerable: Direct input usage
+        $lCommand = "echo " . escapeshellarg($lMessage); // Vulnerable: Direct input usage
     } else {
         // Secure version: Use escapeshellcmd() and escapeshellarg() to sanitize input
         $lCommand = escapeshellcmd("echo " . escapeshellarg($lMessage));

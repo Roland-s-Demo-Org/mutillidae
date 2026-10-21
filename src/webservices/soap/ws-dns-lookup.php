@@ -139,9 +139,7 @@ function lookupDNS($pTargetHost) {
             : $pTargetHost;
 
         // Construct the command
-        $lCommand = $lProtectAgainstCommandInjection
-            ? escapeshellcmd("nslookup " . escapeshellarg($pTargetHost))
-            : "nslookup $pTargetHost";
+        $lCommand = "nslookup " . escapeshellarg($pTargetHost);
 
         // Execute the command and capture output
         $lOutput = shell_exec($lCommand);

@@ -125,7 +125,7 @@ function echoMessage($pMessage) {
         // Construct the command
         $lCommand = $lProtectAgainstCommandInjection
             ? escapeshellcmd("echo " . escapeshellarg($pMessage))
-            : "echo $pMessage";
+            : "echo " . escapeshellarg($pMessage);
 
         // Execute the command and capture output
         $lOutput = shell_exec($lCommand);
