@@ -217,7 +217,7 @@
 			try{
 			    // open file handle
 				$handle = fopen($lURL, "r");
-	   			echo '<span class="label">File: '.$lTextFileDescription.'</span>';
+	   			echo '<span class="label">File: '.htmlentities($lTextFileDescription, ENT_QUOTES).'</span>';
 	   			echo '<pre>';
 	   			echo stream_get_contents($handle);
 				echo '</pre>';

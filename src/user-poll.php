@@ -197,7 +197,7 @@
 			<tr><td></td></tr>
 			<tr>
 				<td class="report-header">
-				<?php echo $lUserChoiceMessage; ?>
+				<?php echo htmlentities($lUserChoiceMessage, ENT_QUOTES); ?>
 				</td>
 			</tr>
 		</table>
