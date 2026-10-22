@@ -53,7 +53,7 @@
 <!-- Note: To encourage IE into compatibility mode add the following
 	meta tag into the HTML head section -->
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
-<iframe src="<?php echo $lPageToFrame; ?>"
+<iframe src="<?php echo htmlentities($lPageToFrame, ENT_QUOTES); ?>"
 		style="margin-left:auto; margin-right:auto; border:none; overflow:hidden;"
 		PathRelativeStylesheetInjectionArea="1" 
 		width="100%" height="600px" 

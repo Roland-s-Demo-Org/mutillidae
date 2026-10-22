@@ -182,7 +182,7 @@
 
 			echo '<div class="report-header">
 					Results for &quot;<span style="color:#770000;">'
-					.$lUsername.
+					.htmlentities($lUsername, ENT_QUOTES).
 					'</span>&quot;. '.$lRecordsFound.' records found.
 				</div>';
 

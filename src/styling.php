@@ -66,12 +66,12 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 	<link rel="stylesheet" type="text/css" href="./styles/global-styles.css" />
-	<title><?php echo $lPageTitle?></title>
+	<title><?php echo htmlentities($lPageTitle, ENT_QUOTES)?></title>
 </head>
 <body>
 	<table>
 		<tr><td>&nbsp;</td></tr>
-		<tr><td><div class="page-title"><?php echo $lPageTitle?></div></td></tr>
+		<tr><td><div class="page-title"><?php echo htmlentities($lPageTitle, ENT_QUOTES)?></div></td></tr>
 		<tr><td>&nbsp;</td></tr>
 		<tr>
 			<td class="form-header">
